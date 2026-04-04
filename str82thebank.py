@@ -5,6 +5,7 @@ from datetime import datetime
 st.set_page_config(page_title="Str82TheBank", layout="wide")
 st.title("💰 Str82TheBank")
 
+# Current bankroll
 bankroll = 544.43
 total_bets = 8
 wins = 6
@@ -20,15 +21,17 @@ col4.metric("Total Bets", total_bets)
 st.divider()
 
 st.subheader("Daily Locks")
-
-st.info("Locks loading... (model connected soon)")
+st.info("✅ Live model will auto-populate locks here every morning once connected")
 
 st.divider()
 
 st.subheader("Results History")
 history = pd.DataFrame({
-    "Date": ,
-    "W-L": ["2-1", "4-1" "+$13.85", "+$30.58" "+2.77%", "+5.96%" "$513.85", "$544.43"]
+    "Date": ["Apr 2", "Apr 3"],
+    "W-L": ["2-1", "4-1"],
+    "P/L": ["+$13.85", "+$30.58"],
+    "ROI": ["+2.77%", "+5.96%"],
+    "Bankroll": ["$513.85", "$544.43"]
 })
 st.dataframe(history, use_container_width=True, hide_index=True)
 

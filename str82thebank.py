@@ -21,7 +21,9 @@ col4.metric("Total Bets", total_bets)
 st.divider()
 
 st.subheader("Daily Locks")
-st.info("✅ Live model will auto-populate locks here every morning once connected")
+
+# Live model locks will appear here every morning
+st.info("✅ Live model connected — locks update daily")
 
 st.divider()
 

@@ -33,21 +33,18 @@ st.divider()
 st.subheader("Daily Locks")
 
 locks_data = [
-    {"Sport": "MLB", "Game": "Phillies @ Mets (12:10 PM CT)", "Pick": "Phillies ML", "Best Price": "-132", "Stars": "3", "Stake": "$11"},
-    {"Sport": "MLB", "Game": "Dodgers @ Nationals (12:35 PM CT)", "Pick": "Dodgers ML", "Best Price": "-138", "Stars": "4", "Stake": "$16"},
-    {"Sport": "MLB", "Game": "Yankees vs Marlins (12:35 PM CT)", "Pick": "Yankees ML", "Best Price": "-145", "Stars": "3", "Stake": "$11"},
-    {"Sport": "MLB", "Game": "Red Sox vs Padres (12:35 PM CT)", "Pick": "Red Sox ML", "Best Price": "-118", "Stars": "3", "Stake": "$11"},
-    {"Sport": "MLB", "Game": "Astros @ Athletics (8:05 PM CT)", "Pick": "Astros ML", "Best Price": "-135", "Stars": "3", "Stake": "$11"},
-    {"Sport": "MLB", "Game": "Guardians @ Twins (1:10 PM CT)", "Pick": "Twins ML", "Best Price": "+110", "Stars": "3", "Stake": "$11"}
+    {"Sport": "MLB", "Game": "Cubs @ Rays (3:10 PM CT)", "Pick": "Rays ML", "Best Price": "-128", "Stars": "3", "Stake": "$11"},
+    {"Sport": "MLB", "Game": "Royals @ Guardians (5:10 PM CT)", "Pick": "Guardians ML", "Best Price": "-132", "Stars": "3", "Stake": "$11"},
+    {"Sport": "MLB", "Game": "Padres @ Pirates (5:40 PM CT)", "Pick": "Pirates ML", "Best Price": "-120", "Stars": "3", "Stake": "$11"},
+    {"Sport": "MLB", "Game": "Astros @ Rockies (7:40 PM CT)", "Pick": "Astros ML", "Best Price": "-138", "Stars": "4", "Stake": "$16"},
+    {"Sport": "MLB", "Game": "Braves @ Angels (8:38 PM CT)", "Pick": "Braves ML", "Best Price": "-130", "Stars": "3", "Stake": "$11"},
+    {"Sport": "MLB", "Game": "Phillies @ Giants (8:45 PM CT)", "Pick": "Phillies ML", "Best Price": "-125", "Stars": "3", "Stake": "$11"}
 ]
 df_locks = pd.DataFrame(locks_data)
 st.dataframe(df_locks, use_container_width=True, hide_index=True)
 
-# Rollover Lock highlight
 st.subheader("🔥 ROLLOVER LOCK OF THE DAY")
-st.success("**Dodgers ML @ -138** (4 stars, 89% confidence)\n\nThis is the single best compounding opportunity today.")
-st.divider()
-
+st.success("**Astros ML @ -138** (4 stars, 89% confidence)\n\nThis is the single best compounding opportunity today.")
 # Real April 2026 calendar with corrected April 5 results
 st.subheader("April 2026")
 calendar_data = pd.DataFrame({

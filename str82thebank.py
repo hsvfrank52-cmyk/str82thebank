@@ -14,7 +14,7 @@ st.markdown("""
     """, unsafe_allow_html=True)
 
 st.title("💰 STR82THEBANK")
-st.caption("LIVE • 24/7 BASEBALL • 1-4% DISCIPLINE")
+st.caption("• 24/7 BASEBALL • 1-4% DISCIPLINE")
 
 # Bankroll section (exact style from your screenshots)
 col1, col2 = st.columns([3, 1])

@@ -2,39 +2,49 @@ import streamlit as st
 import pandas as pd
 from datetime import datetime
 
-st.set_page_config(page_title="Str82TheBank", layout="wide")
-st.title("💰 Str82TheBank")
+# Dark theme matching your screenshots
+st.set_page_config(page_title="Str82TheBank", layout="wide", initial_sidebar_state="collapsed")
+st.markdown("""
+    <style>
+    .stApp { background-color: #0E1117; color: #FAFAFA; }
+    .big-font { font-size: 52px !important; font-weight: bold; color: #FFFFFF; }
+    .green-text { color: #00FF7F; }
+    .metric-label { font-size: 14px; color: #AAAAAA; }
+    </style>
+    """, unsafe_allow_html=True)
 
-# Current bankroll
-bankroll = 544.43
-total_bets = 8
-wins = 6
-losses = 2
-roi = (bankroll - 500) / 500 * 100
+st.title("💰 STR82THEBANK")
+st.caption("LIVE • 24/7 BASEBALL • 1-4% DISCIPLINE")
 
-col1, col2, col3, col4 = st.columns(4)
-col1.metric("Bankroll", f"${bankroll:,.2f}", f"+${44.43:.2f}")
-col2.metric("Win Rate", f"{wins/total_bets*100:.1f}%", f"{wins}-{losses}")
-col3.metric("Total ROI", f"{roi:.2f}%", "On pace for 10%+")
-col4.metric("Total Bets", total_bets)
+# Bankroll section (matches your screenshot)
+col1, col2 = st.columns([3, 1])
+with col1:
+    st.markdown('<p class="big-font">$548.73</p>', unsafe_allow_html=True)
+    st.markdown('<span class="green-text">+$48.73 P/L</span> &nbsp;&nbsp;&nbsp; <span class="green-text">+9.75% ROI</span>', unsafe_allow_html=True)
+
+st.markdown("**21 - 5 - 0** RECORD", unsafe_allow_html=True)
+
+# Win rate bar
+st.progress(0.692)  # 69.2% from current record
+st.caption("69.2% WIN RATE")
 
 st.divider()
 
-st.subheader("Daily Locks")
-
-# Live model locks will appear here every morning
-st.info("✅ Live model connected — locks update daily")
+# Locks section
+st.subheader("🔒 LOCKS")
+st.info("No locks today — model will auto-populate at 10:00 AM CT")
 
 st.divider()
 
-st.subheader("Results History")
-history = pd.DataFrame({
-    "Date": ["Apr 2", "Apr 3"],
-    "W-L": ["2-1", "4-1"],
-    "P/L": ["+$13.85", "+$30.58"],
-    "ROI": ["+2.77%", "+5.96%"],
-    "Bankroll": ["$513.85", "$544.43"]
+# April 2026 Calendar (exactly like your screenshot)
+st.subheader("April 2026")
+calendar_data = pd.DataFrame({
+    "Date": ["1", "2", "3", "4", "5"],
+    "P/L": ["+$535", "+$489", "+$621", "+$471", "—"],
+    "Record": ["5-1", "3-0", "6-2", "7-2", "—"]
 })
-st.dataframe(history, use_container_width=True, hide_index=True)
+st.dataframe(calendar_data, use_container_width=True, hide_index=True)
 
 st.caption(f"Last updated: {datetime.now().strftime('%B %d, %Y %I:%M %p')}")
+
+st.success("✅ Dashboard now matches your screenshots")

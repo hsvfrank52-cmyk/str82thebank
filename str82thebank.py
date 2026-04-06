@@ -2,7 +2,7 @@ import streamlit as st
 import pandas as pd
 from datetime import datetime
 
-# Dark theme exactly like your screenshots
+# Exact dark theme from your screenshots
 st.set_page_config(page_title="Str82TheBank", layout="wide", initial_sidebar_state="collapsed")
 st.markdown("""
     <style>
@@ -16,32 +16,31 @@ st.markdown("""
 st.title("💰 STR82THEBANK")
 st.caption("LIVE • 24/7 BASEBALL • 1-4% DISCIPLINE")
 
-# Bankroll section (matches your screenshot style)
+# Bankroll section (exact style from your screenshots)
 col1, col2 = st.columns([3, 1])
 with col1:
-    st.markdown('<p class="big-font">$548.73</p>', unsafe_allow_html=True)
-    st.markdown('<span class="green-text">+$48.73 P/L</span> &nbsp;&nbsp;&nbsp; <span class="green-text">+9.75% ROI</span>', unsafe_allow_html=True)
+    st.markdown('<p class="big-font">$526.33</p>', unsafe_allow_html=True)
+    st.markdown('<span class="green-text">+$26.33 P/L</span> &nbsp;&nbsp;&nbsp; <span class="green-text">+5.27% ROI</span>', unsafe_allow_html=True)
 
-st.markdown("**9 - 4 - 0** RECORD", unsafe_allow_html=True)
+st.markdown("**13 - 10 - 0** RECORD", unsafe_allow_html=True)
 
 # Win rate bar
-st.progress(0.692)
-st.caption("69.2% WIN RATE")
+st.progress(0.565)
+st.caption("56.5% WIN RATE")
 
 st.divider()
 
-# Locks section
 st.subheader("🔒 LOCKS")
 st.info("No locks today — model will auto-populate at 10:00 AM CT")
 
 st.divider()
 
-# April 2026 Calendar (real data only)
+# Real April 2026 calendar with corrected April 5 results
 st.subheader("April 2026")
 calendar_data = pd.DataFrame({
     "Date": ["2", "3", "4", "5"],
-    "P/L": ["+$13.85", "+$30.58", "+$4.30", "—"],
-    "Record": ["2-1", "4-1", "3-2", "Pending"]
+    "P/L": ["+$13.85", "+$30.58", "+$4.30", "–$22.40"],
+    "Record": ["2-1", "4-1", "3-2", "4-6"]
 })
 st.dataframe(calendar_data, use_container_width=True, hide_index=True)
 
